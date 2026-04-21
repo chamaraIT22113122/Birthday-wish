@@ -1,0 +1,66 @@
+.section {
+  padding: 70px 16px;
+  background: linear-gradient(135deg, #1a0a2e 0%, #0d0618 50%, #0a0f24 100%);
+  position: relative; overflow: hidden;
+}
+
+.section::before {
+  content:'';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 30% 50%, rgba(255,110,180,0.1) 0%, transparent 55%),
+    radial-gradient(ellipse at 70% 50%, rgba(56,189,248,0.08) 0%, transparent 55%);
+  pointer-events: none;
+}
+
+.inner {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.title {
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(2rem, 5vw, 3rem);
+  text-align: center;
+  color: white;
+  margin-bottom: 50px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.card {
+  flex: 1; min-width: 200px; max-width: 260px;
+  padding: 38px 24px;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.055);
+  border: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
+  backdrop-filter: blur(10px);
+  cursor: default;
+}
+
+.num {
+  display: block;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.lbl {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.6);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+@media (max-width: 480px) {
+  .section { padding: 60px 14px; }
+  .row { gap: 14px; }
+  .card { min-width: 140px; padding: 26px 16px; }
+}

@@ -1,0 +1,87 @@
+.section {
+  padding: 80px 20px;
+  background: radial-gradient(circle at center, rgba(56,189,248,0.1) 0%, transparent 70%);
+}
+
+.heading {
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  text-align: center;
+  color: #ffb3d9;
+  margin-bottom: 60px;
+  text-shadow: 0 4px 15px rgba(255, 110, 180, 0.4);
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.line {
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, rgba(255,110,180,0.5), transparent);
+}
+
+.item {
+  position: relative;
+  padding-left: 70px;
+  margin-bottom: 50px;
+}
+
+.item:last-child {
+  margin-bottom: 0;
+}
+
+.dot {
+  position: absolute;
+  left: 23px;
+  top: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fbbf24;
+  box-shadow: 0 0 10px #fbbf24, 0 0 20px #fbbf24;
+  z-index: 2;
+}
+
+.content {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 24px;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+}
+
+.date {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.85rem;
+  color: #fbbf24;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.title {
+  font-size: 1.25rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.desc {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.6;
+}
+
+@media (max-width: 480px) {
+  .line { left: 20px; }
+  .dot { left: 13px; }
+  .item { padding-left: 50px; }
+}

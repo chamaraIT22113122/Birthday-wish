@@ -1,0 +1,267 @@
+.hero {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 16px 40px;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(168,85,247,0.28) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(255,110,180,0.22) 0%, transparent 55%),
+    radial-gradient(ellipse at 50% 100%, rgba(56,189,248,0.18) 0%, transparent 50%);
+}
+
+.glow {
+  position: absolute;
+  width: 650px; height: 650px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(168,85,247,0.18) 0%, transparent 70%);
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+/* ── Cake ── */
+.cakeWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 32px;
+  filter: drop-shadow(0 20px 44px rgba(255,110,180,0.5));
+  position: relative;
+  z-index: 1;
+  scale: clamp(0.6, 2.5vw + 0.5, 1);
+}
+
+.candlesRow {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 4px;
+}
+
+.candle {
+  width: 13px;
+  height: 48px;
+  border-radius: 7px;
+  background: linear-gradient(to bottom, #ff6eb4, #a855f7);
+  position: relative;
+  box-shadow: 0 0 10px rgba(255,110,180,0.7);
+  transition: background 0.5s, box-shadow 0.5s;
+}
+
+.flame {
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15px; height: 24px;
+  background: radial-gradient(ellipse at bottom,
+    #fff500 0%, #ff8c00 45%, #ff4500 80%, transparent 100%);
+  border-radius: 50% 50% 30% 30%;
+  box-shadow: 0 0 14px #ff8c00, 0 0 24px #ff4500;
+  transform-origin: center bottom;
+}
+
+.smokeWrap {
+  position: absolute;
+  top: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 2px;
+}
+
+.smoke {
+  width: 4px; height: 20px;
+  background: linear-gradient(to top, rgba(200,200,200,0.6), transparent);
+  border-radius: 4px;
+  animation: smokeRise 1.5s ease-in-out infinite;
+}
+
+@keyframes smokeRise {
+  0%   { transform: translateY(0) scaleX(1); opacity: 0.6; }
+  100% { transform: translateY(-20px) scaleX(2); opacity: 0; }
+}
+
+.top {
+  width: 190px; height: 62px;
+  background: linear-gradient(135deg, #ff6eb4 0%, #fb7185 100%);
+  border-radius: 16px 16px 0 0;
+  border: 3px solid rgba(255,255,255,0.3);
+  display: flex; align-items: center; justify-content: space-around;
+  padding: 0 16px;
+  font-size: 1.4rem;
+  position: relative;
+  overflow: visible;
+}
+
+.drip {
+  position: absolute;
+  bottom: -14px; left: 0;
+  width: 100%; height: 22px;
+  background: linear-gradient(to bottom, #ffb3d9 0%, transparent 100%);
+  clip-path: polygon(0 0,8% 0,10% 100%,20% 0,27% 0,30% 100%,40% 0,47% 0,50% 100%,60% 0,67% 0,70% 100%,80% 0,87% 0,90% 100%,100% 0,100% 0,0 0);
+  z-index: 2;
+}
+
+.mid {
+  width: 230px; height: 72px;
+  background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
+  border: 3px solid rgba(255,255,255,0.2);
+  position: relative;
+}
+.mid::after {
+  content:'';
+  position:absolute; inset:8px;
+  border:2px dashed rgba(255,255,255,0.18);
+  border-radius:4px;
+}
+
+.bot {
+  width: 270px; height: 82px;
+  background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%);
+  border-radius: 0 0 20px 20px;
+  border: 3px solid rgba(255,255,255,0.18);
+  display: flex; align-items: center; justify-content: center;
+}
+
+.botText {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.92);
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+.plate {
+  width: 310px; height: 20px;
+  background: linear-gradient(to bottom, #e2e8f0, #94a3b8);
+  border-radius: 50%;
+  margin-top: 8px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.4);
+}
+
+.plateShadow {
+  width: 250px; height: 18px;
+  background: radial-gradient(ellipse, rgba(0,0,0,0.45) 0%, transparent 70%);
+  border-radius: 50%;
+  margin-top: -4px;
+}
+
+/* ── Text ── */
+.textBlock {
+  text-align: center;
+  position: relative; z-index: 1;
+}
+
+.subtop {
+  font-size: clamp(0.8rem, 2vw, 0.95rem);
+  color: #ffb3d9;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.mainTitle {
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(3.5rem, 10vw, 8rem);
+  line-height: 1;
+  margin-bottom: 18px;
+  background: linear-gradient(135deg, #ff6eb4, #fbbf24, #a855f7, #38bdf8, #ff6eb4);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradShift 4s ease-in-out infinite;
+}
+
+@keyframes gradShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.herName {
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(1.3rem, 3.5vw, 2rem);
+  color: #ffb3d9;
+  margin-bottom: 12px;
+}
+
+.tagline {
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  color: rgba(255,255,255,0.72);
+  max-width: 480px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+}
+
+.blowBtn {
+  display: inline-block;
+  padding: 15px 42px;
+  font-size: 1.05rem;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  border: none; border-radius: 50px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ff6eb4, #a855f7, #38bdf8);
+  background-size: 200% 200%;
+  color: white;
+  animation: gradShift 3s ease infinite;
+  letter-spacing: 0.5px;
+}
+.blowBtn:disabled { cursor: default; opacity: 0.7; }
+
+/* ── Overlay ── */
+.overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.72);
+  backdrop-filter: blur(8px);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 1000;
+}
+
+.overlayCard {
+  text-align: center;
+  background: rgba(255,255,255,0.09);
+  border: 1px solid rgba(255,255,255,0.18);
+  padding: 52px 64px;
+  border-radius: 28px;
+  backdrop-filter: blur(22px);
+  max-width: 420px; width: 90%;
+}
+
+.overlayCard h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.6rem;
+  color: #ffb3d9;
+  margin-bottom: 10px;
+}
+
+.overlayCard p {
+  color: rgba(255,255,255,0.72);
+  margin-bottom: 26px;
+  font-size: 1rem;
+}
+
+.overlayCard button {
+  padding: 10px 30px;
+  border: 2px solid #ff6eb4;
+  background: transparent;
+  color: #ffb3d9;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.9rem; border-radius: 50px;
+  cursor: pointer; transition: all 0.2s;
+}
+.overlayCard button:hover { background: #ff6eb4; color: white; }
+
+/* ── Mobile ── */
+@media (max-width: 480px) {
+  .hero { padding: 70px 14px 36px; }
+  .cakeWrap { scale: 0.72; margin-bottom: 0; }
+  .textBlock { margin-top: -20px; }
+  .blowBtn { padding: 13px 28px; font-size: 0.95rem; }
+  .overlayCard { padding: 36px 24px; }
+  .candlesRow { gap: 12px; }
+}

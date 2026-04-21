@@ -1,0 +1,38 @@
+/* ─── Global Reset & Tokens ─── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --pink:    #ff6eb4;
+  --pink-l:  #ffb3d9;
+  --purple:  #a855f7;
+  --purple-d:#7c3aed;
+  --blue:    #38bdf8;
+  --gold:    #fbbf24;
+  --rose:    #fb7185;
+  --bg:      #0b0515;
+  --glass:   rgba(255,255,255,0.07);
+  --border:  rgba(255,255,255,0.12);
+  --white:   #ffffff;
+  --script:  'Dancing Script', cursive;
+  --sans:    'Outfit', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--white);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+#root { min-height: 100vh; }
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0b0515; }
+::-webkit-scrollbar-thumb { background: var(--purple); border-radius: 3px; }
+
+/* ─── Selection ─── */
+::selection { background: rgba(168,85,247,0.4); color: white; }
