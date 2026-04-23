@@ -14,6 +14,12 @@ import p7 from '../assets/imagers/WhatsApp Image 2026-04-21 at 8.36.37 AM.jpeg'
 import p8 from '../assets/imagers/WhatsApp Image 2026-04-21 at 8.36.38 AM (1).jpeg'
 import p9 from '../assets/imagers/WhatsApp Image 2026-04-21 at 8.36.38 AM.jpeg'
 import p10 from '../assets/imagers/WhatsApp Image 2026-04-21 at 8.38.08 AM.jpeg'
+import p11 from '../assets/imagers/WhatsApp Image 2026-04-23 at 11.26.02 AM.jpeg'
+import p12 from '../assets/imagers/WhatsApp Image 2026-04-23 at 11.26.03 AM.jpeg'
+import p13 from '../assets/imagers/WhatsApp Image 2026-04-23 at 11.26.04 AM.jpeg'
+import p14 from '../assets/imagers/WhatsApp Image 2026-04-23 at 11.32.21 AM.jpeg'
+import p15 from '../assets/imagers/WhatsApp Image 2026-04-23 at 11.35.16 AM.jpeg'
+import p16 from '../assets/imagers/WhatsApp Image 2026-04-23 at 11.35.17 AM.jpeg'
 
 const photos = [
   { src: p1,  caption: 'Adventures together 🌿',        rotate: -3 },
@@ -26,6 +32,12 @@ const photos = [
   { src: p8,  caption: 'You & me, always 💫',            rotate: 2  },
   { src: p9,  caption: 'Sun-kissed days 🌞',             rotate: -3 },
   { src: p10, caption: 'Forever in my heart 💝',         rotate: 1  },
+  { src: p11, caption: 'Every smile with you 😊',         rotate: -2 },
+  { src: p12, caption: 'A beautiful journey 🌹',         rotate: 3  },
+  { src: p13, caption: 'Cherished moments 🕊️',           rotate: -4 },
+  { src: p14, caption: 'Together is a beautiful place ❤️', rotate: 2 },
+  { src: p15, caption: 'Endless laughter 🌻',            rotate: -3 },
+  { src: p16, caption: 'You make me complete 💍',        rotate: 1  },
 ]
 
 function Polaroid({ photo, index }) {
